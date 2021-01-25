@@ -6,20 +6,15 @@ import './styles.scss';
 
 // == Composant
 const Currencies = () => (
-  <div className="currencies">
-    <ul className="currencies__list">
-      <li className="currencies__list-item">Currencies</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-      <li className="currencies__list-item">Dollar</li>
-    </ul>
-  </div>
+  <ul className="currencies">
+    <h2 className="currencies__list-item">Currencies</h2>
+    <li className="currencies__list-item">Dollar</li>
+    <li className="currencies__list-item">Dollar</li>
+    <li className="currencies__list-item">Dollar</li>
+    <li className="currencies__list-item">Dollar</li>
+    <li className="currencies__list-item">Dollar</li>
+    <li className="currencies__list-item">Dollar</li>
+  </ul>
 );
 
 // == Export
