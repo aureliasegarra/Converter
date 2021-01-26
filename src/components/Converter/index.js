@@ -27,7 +27,7 @@ class Converter extends React.Component {
       open: !open,
     });
   }
- 
+
   makeConversion = () => {
     const { baseAmount, currency } = this.state;
 

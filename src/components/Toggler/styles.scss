@@ -1,0 +1,11 @@
+@use 'src/styles/vars' as v;
+
+.btn {
+  background-color: v.$color-alt;
+  border: 3px solid v.$color-primary;
+  width: 100%;
+  height: 40px;
+  color: v.$color-light;
+  font-size: v.$text-normal;
+  font-family: 'Spartan', serif;
+}

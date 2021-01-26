@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './styles.scss';
+
 const Toggler = ({ onClickButton }) => {
   const handleClick = () => {
     onClickButton();
@@ -10,7 +12,7 @@ const Toggler = ({ onClickButton }) => {
   // ici on vient utiliser la fonction qu'on nous a passé à travers les props
   // celle-ci sera exécuter à chaque clic
   // return <button type="button" onClick={onClickButton}>Toggle</button>;
-  return <button type="button" onClick={handleClick}>Toggle</button>;
+  return <button type="button" className="btn" onClick={handleClick}>Toggle</button>;
 };
 
 Toggler.propTypes = {
