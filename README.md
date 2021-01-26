@@ -3,7 +3,7 @@
 ## Create a converter using the fundamental structure of a React project.
 
 ## Illustration
-![Exemple](img/rendering.png)
+![Exemple](./screenshot.png)
 
 ## Language
 - HTML5
