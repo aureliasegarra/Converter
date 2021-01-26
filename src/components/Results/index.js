@@ -1,28 +1,24 @@
-// == Import npm
+// Import React
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// == Import
+// Import data
 import './styles.scss';
 
-// == Composant
-const Results = ({ currencies}) => {
-  const jsxCurrencies = currencies.map((currency) => {
-    const title = <h1>{rate}</h1>;
-    const subtitle = <p>{name}</p>;
-    return title, subtitle;
-  });
+const Amount = ({ value, currency }) => {
+  console.log('Amount');
+  // React.createElement(Converter, null);
   return (
-    <div className="results">
-      {jsxCurrencies}
+    <div className="amount">
+      <p className="amount__value">{value}</p>
+      <p className="amount__currency">{currency}</p>
     </div>
   );
 };
 
-Results.propTypes = {
-  name: PropTypes.string.isRequired,
-  rate: PropTypes.number.isRequired,
+Amount.propTypes = {
+  value: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
 };
 
-// == Export
-export default Results;
+export default Amount;
