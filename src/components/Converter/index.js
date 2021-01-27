@@ -20,9 +20,8 @@ class Converter extends React.Component {
     search: '',
   }
 
-  // les lifeCycles permettent d'intéagir avec le DOM
+  // LifeCycles => interaction with DOM
   componentDidMount() {
-  // ici on aura accès au DOM et toutes les interactions se passeront ici
     this.changePageTitleEffect();
   }
 
@@ -47,7 +46,7 @@ class Converter extends React.Component {
     });
   }
 
-  // Fonction qui changera la valeur de la devise, de currency du state
+  // Function that will change the value of the currency, state currency
   setCurrency = (currency) => {
     this.setState({
       currency,
@@ -57,46 +56,45 @@ class Converter extends React.Component {
   makeConversion = () => {
     const { baseAmount, currency } = this.state;
 
-    // on va rechercher le taux de change
+    // I get the exchange rate
     const foundCurrency = currenciesData.find((element) => element.name === currency);
 
-    // on va faire la convertion qu'on renverra
+    // I make the conversion that we will send back
     const convertedAmount = baseAmount * foundCurrency.rate;
 
     return Math.round(convertedAmount * 100) / 100;
   }
 
-  // fonction qui va modifier la valeur de value dans le state
+  // function which will modify the value of value in the state
   setSearch = (value) => {
     this.setState({
       search: value,
     });
   }
 
-  // fonction pour rechercher une devise
+  // function to search for a currency
   getCurrencies = () => {
-    // par défaut je veux retourner la liste complète des devise
+    // by default I want to return the complete list of currencies
     let filteredCurrencies = currenciesData;
     const { search } = this.state;
-    // si search n'est pas égal à une chaine de caractère vide, on filtre les devises
+    // if search is not equal to an empty character string, we filter the currencies
     // if (search !== '') {
-    // on peut utiliser la valeur truthy de la chaine de caractère non-vide
+    // we can use the truthy value of the non-empty string
     if (search) {
-      // on vient filtrer la liste des devises
+      // we just filter the list of currencies
       filteredCurrencies = currenciesData.filter((currency) => {
-        // on passe tout en minuscule pour comparer ce qui est comparable
+        // we pass everything in lowercase to compare
         const loweredCurrency = currency.name.toLowerCase();
         const loweredSearch = search.toLowerCase();
-        // ici on vient tester si dans la chaine de caractère du nom de la devises
-        // on a bien ce qu'on a dans la recherche
+        // here we come to test if in the character string of the name of the currency
+        // we have what we have in research
         return loweredCurrency.includes(loweredSearch);
       });
     }
-
     return filteredCurrencies;
   }
 
-  // fonction qui va modifier la valeur de amount dans le state
+  // function which will modify the value of amount in the state
   setBaseAmount = (value) => {
     console.log('je veux changer la valeur de baseAmount');
     this.setState({
