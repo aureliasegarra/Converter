@@ -20,13 +20,22 @@ class Converter extends React.Component {
     search: '',
   }
 
+  // les lifeCycles permettent d'intéagir avec le DOM
   componentDidMount() {
   // ici on aura accès au DOM et toutes les interactions se passeront ici
-    console.log('componentDidMount');
+    this.changePageTitleEffect();
   }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
+  componentDidUpdate(prevProps, prevState) {
+    const { currency } = this.state;
+    if (currency !== prevState.currency) {
+      this.changePageTitleEffect();
+    }
+  }
+
+  changePageTitleEffect = () => {
+    const { currency } = this.state;
+    document.title = `Euro to ${currency}`;
   }
 
   toggle = () => {
