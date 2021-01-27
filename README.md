@@ -13,14 +13,14 @@
 
 ## Goals 
 - Fundamentals (Javascript)
-- Virtual DOM
-- Components
+- Virtual DOM / LifeCycles (componentDidMount & componentDidUpdate)
+- Components / controlled components
 - Props
 - Staleless and Stateful components
 - Dynamize with data
 
 ## Status
-Project not completed
+Project completed
 
 ## Context
 Project carried out during my training as a web developer

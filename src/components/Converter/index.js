@@ -20,6 +20,15 @@ class Converter extends React.Component {
     search: '',
   }
 
+  componentDidMount() {
+  // ici on aura accès au DOM et toutes les interactions se passeront ici
+    console.log('componentDidMount');
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate');
+  }
+
   toggle = () => {
     // DO NOT CHANGE STATE VALUES DIRECTLY
     // to change a state value, you have to go through this.setState
